@@ -1,0 +1,245 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main"
+    ;
+    grid-template-rows: 100px 1fr ;
+    grid-template-columns: 200px 1fr;
+}
+.header{
+    grid-area: header;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.header .search-bar{
+    display: flex;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: #406d96 ;
+    display: grid;
+    justify-content: center;
+}
+
+.main_container{
+    grid-area: main;
+    background-color: #d8e8e8;
+    display: grid;
+    place-items: center;
+
+}
+.card_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/* estilizar el contenido de la sidebar */
+
+.dashboard_logo{
+    list-style-type: none;
+    color: white;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-btn{
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.menu-btn a{
+    color: white;
+
+}
+.menu-btn:hover{
+    background-color: #4995b3;
+    cursor: pointer;
+}
+
+/* estilizar el header*/
+
+.search-bar{
+    justify-content: center;
+    align-items: center;
+
+}
+.search-bar button{
+    height: 50px;
+    width: 50px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-bar input{
+    height: 30px;
+    width:70%;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+    background-color: #d8e8e8;
+}
+
+.perfil{
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.profile{
+    display: flex;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.perfil i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user{
+    background-color: lightgray;
+    display: inline-flex;
+    align-items: center;
+    justify-content: end;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.options{
+    display: inline-flex;
+    width: 90%;
+    align-items: center;
+    justify-content: end;
+
+}
+.options button{
+    border: none;
+    border-radius: 20px;
+    background-color: #406d96;
+    height: 2em;
+    width: 80px;
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.options button:hover{
+    background-color: #4995b3;
+    transition: 200ms;
+}
+
+
+/* cards */
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.081);
+  }
+  /*
+  .date-time-container {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: 0.5rem;
+  } */
+  
+  .date-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    gap: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 1);
+  }
+  
+  .separator {
+    width: 1px;
+    flex: 1 1 0%;
+    background-color: rgba(17, 24, 39, 0.1);
+  }
+  
+  .content {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .infos {
+    border-left: 1px solid rgba(17, 24, 39, 0.1);
+    padding: 1rem;
+  }
+  
+  .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18.72px;
+    color: rgba(17, 24, 39, 1);
+  }
+  
+  .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgba(55, 65, 81, 1);
+  }
+  
+  .action {
+    display: block;
+    background-color: rgba(253, 224, 71, 1);
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 1);
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .action:hover {
+    background-color: rgba(250, 204, 21, 1);
+  }
